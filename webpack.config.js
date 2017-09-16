@@ -52,6 +52,8 @@ module.exports = {
     },
     devServer:{
         contentBase: path.join(__dirname, 'dist'),
+        host: '0.0.0.0',
+        port: 3333,
         stats: "errors-only",
         compress: true,
         port: process.env.PORT,
