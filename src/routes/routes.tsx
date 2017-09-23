@@ -5,10 +5,10 @@ export const ROUTES = {
   index: "referenceToComponent"
 }
 
-let Routes = () => (
-  <Router>
+// // const Routes =  => (
+// //   <Router>
 
-  </Router>
-)
+// //   </Router>
+// // 
 
-export default Routes;
+// export default Routes;
