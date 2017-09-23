@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import Button from '../common/Button/Button'
+import { Button } from 'Common'
 
  class Hello extends React.Component<{}, {}> {
   render() {
     return(
-       <Button label="kill me" />
+       <Button label="click me" />
     )
   }
 }

@@ -6,13 +6,28 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
+    "jest": {
+      "transform": {
+        "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      },
+      "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(unit.jsx?|unit.tsx?)$",
+      "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json"
+      ]
+    },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^21.1.0",
     "awesome-typescript-loader": "^3.2.3",
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
@@ -32,10 +47,12 @@
     "jest": "^20.0.4",
     "node-sass": "^4.5.3",
     "react-test-renderer": "^15.6.1",
+    "regenerator-runtime": "^0.11.0",
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.18.2",
+    "ts-jest": "^21.0.1",
     "ts-loader": "^2.3.7",
     "typescript": "^2.5.2",
     "url-loader": "^0.5.9",
