@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button it match with snapshot 1`] = `
+<Button
+  label="test"
+>
+  <button>
+    test
+  </button>
+</Button>
+`;

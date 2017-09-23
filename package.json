@@ -9,20 +9,25 @@
     "test": "jest",
     "eject": "react-scripts eject"
   },
-    "jest": {
-      "transform": {
-        "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-      },
-      "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(unit.jsx?|unit.tsx?)$",
-      "moduleFileExtensions": [
-        "ts",
-        "tsx",
-        "js",
-        "jsx",
-        "json"
-      ]
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-
+    "testRegex": "(/tests/.*|\\.(unit|test))\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -45,6 +50,8 @@
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.28.0",
     "jest": "^20.0.4",
+    "jest-cli": "^21.1.0",
+    "jest-enzyme": "^3.8.3",
     "node-sass": "^4.5.3",
     "react-test-renderer": "^15.6.1",
     "regenerator-runtime": "^0.11.0",

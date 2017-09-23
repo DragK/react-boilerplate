@@ -1,13 +1,16 @@
 import * as React from 'react'
 import { mount } from 'enzyme'
-import { Button } from 'Common'
+import { Button } from '../../../src/Common/index'
 
+describe('Button' , () => {
+    it('it renders button ' , () => {
+        const wrapper = mount(<Button label='test'/>)
+          expect(wrapper).toHaveLength(1)
+    })
 
-
-describe("Button" , () => {
-    it("it renders button" , () => {
-        const wrapper = mount(<Button />);
-          expect(wrapper).toMatchSnapshot();
+    it('it match with snapshot' , () => {
+        const wrapper = mount(<Button label='test'/>)
+        expect(wrapper).toMatchSnapshot()
     })
 })
 
