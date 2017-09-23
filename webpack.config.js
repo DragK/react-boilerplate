@@ -12,7 +12,14 @@ module.exports = {
         filename: 'app.bundle.js'
   },
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".json"]
+        extensions: [".ts", ".tsx", ".js", ".json"],
+        alias:{
+            Common: path.resolve(__dirname, 'src/Common'),
+            Components: path.resolve(__dirname, 'src/Components'),
+            Reducers: path.resolve(__dirname, 'src/Reducers'),
+            Routes: path.resolve(__dirname, 'src/Routes'),
+            src: path.resolve(__dirname, 'src')
+        }
     },
 
 

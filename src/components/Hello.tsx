@@ -1,9 +1,13 @@
 import * as React from 'react';
-export interface HelloProps {compiler: string; framework: string;};
 
+import { Button } from 'Common'
 
-export class Hello extends React.Component<HelloProps, undefined> {
+ class Hello extends React.Component<{}, {}> {
   render() {
-    return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
+    return(
+       <Button label="click me" />
+    )
   }
 }
+
+export default Hello
