@@ -1,23 +1,16 @@
 import * as React from 'react'
 import './Styles/button.scss' 
+import { ButtonProps } from './ButtonProps'
+import  * as classnames from 'classnames'
 
-
-
-interface ButtonProps {
-    label: string
-    onClick?(e: React.MouseEvent<any>):void
-    classname?: string
-}
-
-
-
-class Button extends React.PureComponent<ButtonProps, null>{
+export class Button extends React.PureComponent<ButtonProps, null>{
     render(){
         return(
-            <button className={this.props.classname} onClick={this.props.onClick}>{this.props.label}</button>
+            <button className={classnames( "button", this.props.size , this.props.classname)} onClick={this.props.onClick}>{this.props.label}</button>
         )
     }
 }
+
 
 
 

@@ -5,7 +5,12 @@ import { Button } from 'Common'
  class Hello extends React.Component<{}, {}> {
   render() {
     return(
-       <Button label="click me" />
+      <div>
+       <Button size="large" classname="danger" label="click me" />
+       <Button size="medium" classname="info" label="click me" />
+       <Button size="small" classname="success" label="click me" />
+
+      </div>
     )
   }
 }

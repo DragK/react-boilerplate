@@ -1,9 +1,9 @@
-import * as React from 'react';
-import {Router} from 'react-router-dom';
+// import * as React from 'react';
+// import {Router} from 'react-router-dom';
 
-export const ROUTES = {
-  index: "referenceToComponent"
-}
+// export const ROUTES = {
+//   index: "referenceToComponent"
+// }
 
 // // const Routes =  => (
 // //   <Router>
