@@ -18,6 +18,7 @@ module.exports = {
             Components: path.resolve(__dirname, 'src/Components'),
             Reducers: path.resolve(__dirname, 'src/Reducers'),
             Routes: path.resolve(__dirname, 'src/Routes'),
+            Images: path.resolve(__dirname, 'assets/images'),
             src: path.resolve(__dirname, 'src')
         }
     },
@@ -32,10 +33,14 @@ module.exports = {
             },
          {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
+        use: [{
+            loader: "style-loader"
+        }, {
+            loader: "css-loader" 
+        }, {
+            loader: "sass-loader" 
+        }]
+       
       }, 
       {
           test: /\.png$/,
@@ -49,9 +54,9 @@ module.exports = {
                }
               }
           ]
-      }
+      },
 
-    
+
     
         
 
